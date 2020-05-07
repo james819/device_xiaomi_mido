@@ -431,3 +431,7 @@ PRODUCT_PACKAGES += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+#ion maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ion.maintainer=James
