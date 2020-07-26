@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ion_mido.mk
+    $(LOCAL_DIR)/superior_mido.mk
 
 COMMON_LUNCH_CHOICES := \
-    ion_mido-eng \
-    ion_mido-userdebug \
-    ion_mido-user
+    superior_mido-eng \
+    superior_mido-userdebug \
+    superior_mido-user

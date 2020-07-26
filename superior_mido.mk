@@ -22,24 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
 # Inherit some common ION stuffs.
-$(call inherit-product, vendor/ion/config/common_full_phone.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
-# ION boot_res
+# Boot Animation Res
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Gapps
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-TARGET_MINIMAL_APPS := false
-TARGET_INCLUDE_STOCK_ARCORE := true
-
-#ion official
-ION_BUILD_TYPE := OFFICIAL
-ION_RELEASE_TYPE := Release
+DEVICE_MAINTAINERS="James"
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := ion_mido
+PRODUCT_NAME := superior_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
@@ -48,7 +40,9 @@ BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Build info
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys"
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 10 QQ2A.200405.005 6254899 release-keys"
+    PRIVATE_BUILD_DESC="mido-user 7.0 NRD90M V9.6.1.0.NCFMIFD release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-keys"
